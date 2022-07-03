@@ -7,15 +7,12 @@ import {
   Group,
   Button,
   TextInput,
-  UnstyledButton,
 } from "@mantine/core";
 import { Link } from "react-router-dom";
 import React from "react";
-import "./App.css";
 import { Search } from "tabler-icons-react";
-import ProductCard from "./Components/productCard";
 
-function App() {
+export default function popular() {
   return (
     <MantineProvider
       theme={{ colorScheme: "dark" }}
@@ -28,20 +25,11 @@ function App() {
             <div
               style={{ display: "flex", alignItems: "center", height: "100%" }}
             >
-              <Link to="/">
-                <UnstyledButton
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                  }}
-                >
-                  <Image
-                    style={{ width: "10%" }}
-                    src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
-                  />
-                </UnstyledButton>
-              </Link>
+              <Image
+                style={{ width: "3%" }}
+                src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
+              />
+              <Text style={{ paddingLeft: "1vw" }}>Placeholder</Text>
               <Group
                 style={{
                   position: "absolute",
@@ -65,15 +53,9 @@ function App() {
         <div
           style={{ display: "flex", flexDirection: "row", overflow: "hidden" }}
         >
-          <ProductCard id={12356} />
-          <ProductCard id={1111} />
-          <ProductCard id={1111} />
-          <ProductCard id={1111} />
-          <ProductCard id={12356} />
+          <Text>HIIII</Text>
         </div>
       </AppShell>
     </MantineProvider>
   );
 }
-
-export default App;
