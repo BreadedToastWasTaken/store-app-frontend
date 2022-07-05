@@ -1,9 +1,8 @@
 import { Card, Image, Text } from "@mantine/core";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./productCard.css";
 import axios from "axios";
 import React from "react";
-import { url } from "inspector";
 
 export default class ProductCard extends React.Component<{ id: number }> {
   state = {
@@ -28,7 +27,7 @@ export default class ProductCard extends React.Component<{ id: number }> {
           justifyContent: "center",
         }}
       >
-        <Link to={`/items/${this.props.id}`}>
+        <Link to={`item/${this.props.id}`}>
           <Card
             style={{
               width: "16vw",
@@ -63,6 +62,7 @@ export default class ProductCard extends React.Component<{ id: number }> {
             </div>
           </Card>
         </Link>
+        <Outlet />
       </div>
     );
   }

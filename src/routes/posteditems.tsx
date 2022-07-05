@@ -1,9 +1,9 @@
 import { Text } from "@mantine/core";
 
-export default function categories() {
+export default function posteditems() {
   return (
     <div style={{ display: "flex", flexDirection: "row", overflow: "hidden" }}>
-      <Text>Pick A Category</Text>
+      <Text>Here are your posted Items:</Text>
     </div>
   );
 }

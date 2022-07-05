@@ -1,9 +1,9 @@
 import { Text } from "@mantine/core";
 
-export default function categories() {
+export default function settingspage() {
   return (
     <div style={{ display: "flex", flexDirection: "row", overflow: "hidden" }}>
-      <Text>Pick A Category</Text>
+      <Text>Heres Your Settings</Text>
     </div>
   );
 }

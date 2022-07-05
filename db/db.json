@@ -4,12 +4,16 @@
       "name": "PS4 Pro Ultra Cool",
       "id": 12356,
       "price": 12444,
+      "author": "Gwendolyn",
+      "authorid": "12344434",
       "image": "https://ae01.alicdn.com/kf/Hb8d7f7291c61433883cfdeec99c247d4n/15-17-19-21-5-23-6-Inch-lcd-Monitor-for-pc.jpg"
     },
     {
       "name": "PSP Mint",
       "id": 1111,
       "price": 80000,
+      "author": "Blair",
+      "authorid": "12344435",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Psp-1000.jpg/1200px-Psp-1000.jpg"
     }
   ],
