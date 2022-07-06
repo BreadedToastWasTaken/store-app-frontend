@@ -5,6 +5,7 @@ import App from "./App";
 import Popular from "./routes/popular";
 import Categories from "./routes/categories";
 import Item from "./routes/item";
+import Login from "./routes/login";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import {
@@ -18,14 +19,17 @@ import {
   MantineProvider,
   Menu,
 } from "@mantine/core";
-import { FileDollar, Search, Settings, User } from "tabler-icons-react";
+import { Search } from "tabler-icons-react";
 import Settingspage from "./routes/settingspage";
 import Posteditems from "./routes/posteditems";
 import Userpage from "./routes/userpage";
+import User from "./Components/User";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+const isLoggedIn = false;
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -62,7 +66,7 @@ root.render(
                   style={{
                     position: "absolute",
                     right: "0",
-                    paddingRight: "5vw",
+                    paddingRight: "1vw",
                   }}
                   spacing="sm"
                 >
@@ -73,48 +77,18 @@ root.render(
                     <Button>Categories</Button>
                   </Link>
                   <TextInput placeholder="Search" icon={<Search size={14} />} />
+                  <User />
                 </Group>
-                <Menu
-                  style={{
-                    position: "absolute",
-                    right: "0",
-                    paddingRight: "1vw",
-                    paddingTop: "1vh",
-                  }}
-                  control={
-                    <UnstyledButton>
-                      <Image
-                        src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"
-                        style={{ width: "2vw" }}
-                      />
-                    </UnstyledButton>
-                  }
-                >
-                  <Link to={`/user/settings`}>
-                    <Menu.Item icon={<Settings size={14} />}>
-                      Settings
-                    </Menu.Item>
-                  </Link>
-                  <Link to={`/user/posteditems`}>
-                    <Menu.Item icon={<FileDollar size={14} />}>
-                      Posted Items
-                    </Menu.Item>
-                  </Link>
-                  <Link to={`/user/1243`}>
-                    <Menu.Item icon={<User size={14} />}>
-                      Your Public Profile
-                    </Menu.Item>
-                  </Link>
-                </Menu>
               </div>
             </Header>
           }
         >
           <Routes>
             <Route path="/" element={<App />} />
-            <Route path="popular" element={<Popular />} />
-            <Route path="categories" element={<Categories />} />
-            <Route path="item/:itemid" element={<Item />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/popular" element={<Popular />} />
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/item/:itemid" element={<Item />} />
             <Route path="/user">
               <Route path="settings" element={<Settingspage />} />
               <Route path="posteditems" element={<Posteditems />} />
